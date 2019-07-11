@@ -1,0 +1,117 @@
+    
+@charset "UTF-8";
+/* CSS Document */
+html {
+  color: #333;
+  background: #fff;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+fieldset, img {
+  border: 0;
+  vertical-align: middle;
+}
+
+:focus {
+  outline: 0;
+}
+
+/*font*/
+th {
+  font-style: normal;
+  font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+input, button, textarea, select, optgroup, option {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  vertical-align: middle;
+  color: #333333;
+}
+
+input, button, textarea, select {
+  *font-size: 100%;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:link, :visited, ins {
+  text-decoration: none;
+}
+
+i {
+  font-style: normal;
+}
+
+/*Clear*/
+.clearfix:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clear {
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  clear: both;
+  overflow: hidden;
+}
+
+/*body*/
+body {
+  font-size: 14px;
+  font-family: "Hiragino Sans GB","Microsoft Yahei UI","Microsoft Yahei","微软雅黑",'Segoe UI',Tahoma,"宋体b8b\4f53",SimSun,sans-serif;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/****** 路由过渡效果 ******/
+.router-fade-enter-active,
+.router-fade-leave-active {
+  transition: opacity .3s;
+}
+
+.router-fade-enter,
+.router-fade-leave-active {
+  opacity: 0;
+}
+
+.flex {
+  display: flex;
+}

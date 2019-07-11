@@ -12,7 +12,9 @@
     "sourceMap": true,
     "baseUrl": ".",
     "types": [
-      "webpack-env"
+      "webpack-env",
+      "./types",
+      "./node_modules/vue/types"
     ],
     "paths": {
       "@/*": [
@@ -35,5 +37,5 @@
   ],
   "exclude": [
     "node_modules"
-  ]
+  ],
 }
