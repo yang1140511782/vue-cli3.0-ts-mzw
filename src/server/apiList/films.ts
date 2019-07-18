@@ -1,10 +1,15 @@
 import { axiosGet } from '../http';
+import { ResJson } from '../types';
+
 /**
  * 电影首页接口
  */
 const films = {
-  getBanner() {
-    return axiosGet('/api/getBanner', {params: { type: 2 }});
+  getBanner(params: object = {}): Promise<ResJson> {
+    return axiosGet('/api/getBanner', { params });
+  },
+  getFilms(params: object = {}): Promise<ResJson> {
+    return axiosGet('api/getFilms', { params });
   },
 };
 

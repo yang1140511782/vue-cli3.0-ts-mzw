@@ -114,4 +114,11 @@ a:hover {
 
 .flex {
   display: flex;
+  align-items: center;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

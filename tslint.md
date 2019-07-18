@@ -1,4 +1,5 @@
 
+### tslint配置
 "quotemark": false, // 字符串文字需要单引号或双引号。
 "indent": false, // 使用制表符或空格强制缩进。
 "member-access": false, // 需要类成员的显式可见性声明。

@@ -1,8 +1,10 @@
 import VueRouter, { Route } from 'vue-router';
+import Vue from 'vue';
+import { Store } from 'vuex';
 
 declare module '*.vue' {
   import Vue from 'vue';
-  export default Vue;
+  export default Vue
 }
 
 declare module 'vue/types/vue' {
@@ -10,12 +12,9 @@ declare module 'vue/types/vue' {
     $http: any;
     $notify: any;
     $router: VueRouter;
-    $route: Route
+    $route: Route;
+    $store: Store<any>;
   }
-}
-declare module 'qs/types/qs' {
-  const qs: any;
-  export default qs;
 }
 
 // 使用import导入图片

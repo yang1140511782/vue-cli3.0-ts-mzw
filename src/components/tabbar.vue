@@ -3,10 +3,10 @@
     <mt-tabbar>
       <mt-tab-item 
         v-for="(item, index) in tabbarList" 
-        :key="item.id" 
+        :key="item.id"
         @click.native="changeTab(index, item)">
         <div :class="currentTab === index ? 'tarbar-item-active' : 'tarbar-item'"> 
-          <icon class="icon" :class="currentTab === index ? 'icon-active'+index : 'icon-default'+index" :src="item.icon"></icon>
+          <i class="icon" :class="currentTab === index ? 'icon-active'+index : 'icon-default'+index" :src="item.icon"></i>
           {{item.name}}
         </div>
       </mt-tab-item>
@@ -39,8 +39,9 @@ export default class MyTabbar extends Vue {
   ];
   private currentTab: number = 0;
 
-  private changeTab(index: number, item: object): void {
+  private changeTab(index: number, item: any): void {
     this.currentTab = index;
+    console.log('this.currentTab: ', this.currentTab);
     this.$router.push(item.path);
   }
 }
@@ -49,6 +50,7 @@ export default class MyTabbar extends Vue {
 <style lang="scss" scoped>
 @import '@/style/mixin.scss';
 .mint-tabbar {
+  position: fixed;
   .mint-tab-item {
     background: #fff;
   }

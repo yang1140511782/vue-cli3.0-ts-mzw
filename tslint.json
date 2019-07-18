@@ -16,6 +16,10 @@
     "object-literal-sort-keys": false,
     "no-consecutive-blank-lines": false,
     "no-console": false,
-    "strictPropertyInitialization": false
+    "strictPropertyInitialization": false,
+    "semicolon": [false, "always"],
+    "prefer-const": false,
+    "eofline": false,
+    "import-blacklist": true
   }
 }
