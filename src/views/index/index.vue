@@ -44,6 +44,7 @@ export default class Index extends Vue {
 
   private created() {
     this.initData();
+    console.log('调试git')
   }
 
   private async initData(): Promise<void> {
