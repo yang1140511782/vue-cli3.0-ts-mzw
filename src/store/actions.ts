@@ -7,6 +7,11 @@ const actions: ActionTree<any, any> = {
     const { data } = await films.getFilms(params);
     return data;
   },
+  // 获取即将上映的电影列表
+  async getNextFilm({ state, commit }, params): Promise<object> {
+    const { data } = await films.getNextFilm(params);
+    return data;
+  },
 };
 
 export default actions;

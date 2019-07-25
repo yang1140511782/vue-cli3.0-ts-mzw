@@ -1,10 +1,10 @@
 <template>
   <div class="film-item">
-    <img :src="filmItem.poster" alt />
+    <img :src="filmItem.poster"/>
 
     <section class="film-item-info">
       <div class="ellipsis film-item-name">
-        <span>{{filmItem.name}}</span>
+        <span class="ellipsis">{{filmItem.name}}</span>
         <span class="tag">{{filmItem.filmType.name}}</span>
       </div>
       <div class="ellipsis label film-item-grade" :class="!!filmItem.grade ? '' :'visibility'">
@@ -17,7 +17,8 @@
       </div>
     </section>
 
-    <div class="buy-btn">购票</div>
+    <div class="buy-btn" v-if="filmItem.isPresale">购票</div>
+    <div class="buy-btn presale-btn" v-else>预购</div>
   </div>
 </template>
 
@@ -35,10 +36,6 @@ export default class FilmTemplate extends Vue {
       },
       '',
     );
-  }
-
-  private created() {
-    // console.log(this.$props);
   }
 }
 </script>
@@ -91,11 +88,15 @@ export default class FilmTemplate extends Vue {
 
   .buy-btn {
     @include wh(50px, 25px);
-    @include font(13px, $commonColor);
-    border: 1px solid $commonColor;
+    @include font(13px, $dominantColor);
+    border: 1px solid $dominantColor;
     line-height: 23px;
     text-align: center;
     border-radius: 2px;
+  }
+  .presale-btn {
+    border: 1px solid #ffb232;
+    @include font(13px, #ffb232);
   }
 }
 </style>

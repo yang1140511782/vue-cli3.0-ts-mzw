@@ -11,6 +11,9 @@ const films = {
   getFilms(params: object = {}): Promise<ResJson> {
     return axiosGet('api/getFilms', { params });
   },
+  getNextFilm(params: object = {}): Promise<ResJson> {
+    return axiosGet('api/getNextFilm', { params });
+  },
 };
 
 export default films;

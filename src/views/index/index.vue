@@ -45,7 +45,7 @@ export default class Index extends Vue {
   private created() {
     this.initData();
   }
-
+  
   private async initData(): Promise<void> {
     this.bannerList = await this.getBanber();
     this.$nextTick(() => {
@@ -94,7 +94,7 @@ export default class Index extends Vue {
     align-items: center;
 
     .router-link-active {
-      color: $commonColor;
+      color: $dominantColor;
       position: relative;
 
       &::after {
@@ -102,7 +102,7 @@ export default class Index extends Vue {
         display: inline-block;
         width: 100%;
         height: 2px;
-        background: $commonColor;
+        background: $dominantColor;
         position:absolute;
         bottom: -10px;
         left: 0;
